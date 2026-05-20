@@ -30,11 +30,7 @@ function initStickyHeader() {
   handleScroll(); // Initial check on load
 }
 
-/*
-=========================================
-2. MOBILE NAVIGATION DRAWER
-=========================================
-*/
+/* MOBILE NAVIGATION DRAWER */
 function initMobileMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -69,22 +65,17 @@ function initMobileMenu() {
   menuToggle.addEventListener('click', toggleMenu);
   backdrop.addEventListener('click', toggleMenu);
   
-  // Close menu when navigation anchors are clicked
+  // Close menu when navigation anchors are clicked — allow default link behavior
   const navLinks = navMenu.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (navMenu.classList.contains('active')) {
-        toggleMenu();
-      }
+      toggleMenu();
     });
   });
 }
 
-/*
-=========================================
-3. DIALOG MODAL FRAMEWORKS
-=========================================
-*/
+/* DIALOG MODAL FRAMEWORKS */
+
 function initModals() {
   const modalOverlays = document.querySelectorAll('.modal-overlay');
   const triggers = document.querySelectorAll('[data-modal-target]');
@@ -129,11 +120,7 @@ function initModals() {
   });
 }
 
-/*
-=========================================
-4. MODULAR FORM VERIFICATIONS
-=========================================
-*/
+/* MODULAR FORM VERIFICATIONS */
 function initFormValidations() {
   // Newsletter Inputs
   const newsletterForms = document.querySelectorAll('.newsletter-form, .footer-news-form');
@@ -144,11 +131,11 @@ function initFormValidations() {
       const email = input.value.trim();
       
       if (!validateEmail(email)) {
-        showToast('❌ Please enter a valid email address.', 'error');
+        showToast(' Please enter a valid email address.', 'error');
         return;
       }
       
-      showToast('🎉 Success! Thank you for subscribing to our newsletter.', 'success');
+      showToast(' Success! Thank you for subscribing to our newsletter.', 'success');
       input.value = '';
     });
   });
@@ -173,13 +160,13 @@ function initFormValidations() {
       });
       
       if (!isValid) {
-        showToast('⚠️ Please fill out all required fields.', 'warning');
+        showToast(' Please fill out all required fields.', 'warning');
         return;
       }
       
       const emailInput = form.querySelector('input[type="email"]');
       if (emailInput && !validateEmail(emailInput.value.trim())) {
-        showToast('❌ Please enter a valid email address.', 'error');
+        showToast(' Please enter a valid email address.', 'error');
         emailInput.style.borderColor = 'hsl(354, 70%, 54%)';
         return;
       }
@@ -192,7 +179,7 @@ function initFormValidations() {
       }
       
       const formType = form.getAttribute('data-form-type') || 'Submission';
-      showToast(`🚀 ${formType} submitted successfully! Our team will contact you soon.`, 'success');
+      showToast(` ${formType} submitted successfully! Our team will contact you soon.`, 'success');
       form.reset();
     });
   });
@@ -203,11 +190,7 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-/*
-=========================================
-5. CLIENT TOAST ALERTS
-=========================================
-*/
+/* CLIENT TOAST ALERTS */
 let toastContainer;
 function initToastNotificationSystem() {
   toastContainer = document.querySelector('.toast-container');
@@ -251,11 +234,7 @@ function showToast(message, type = 'info') {
   }, 4000);
 }
 
-/*
-=========================================
-6. DYNAMIC INTEGER LOADER COUNTERS
-=========================================
-*/
+/*  DYNAMIC INTEGER LOADER COUNTERS */
 function initStatsCounters() {
   const statsElements = document.querySelectorAll('.stats-number[data-target]');
   if (!statsElements.length) return;
@@ -300,11 +279,7 @@ function formatNumber(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-/*
-=========================================
-7. DYNAMIC CATALOG SEARCH AND FILTERING
-=========================================
-*/
+/* DYNAMIC CATALOG SEARCH AND FILTERING */
 function initDynamicFilters() {
   const searchInput = document.getElementById('community-search');
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -357,11 +332,7 @@ function initDynamicFilters() {
   }
 }
 
-/*
-=========================================
-8. DUAL TIMELINE STEP SWITCHERS
-=========================================
-*/
+/* DUAL TIMELINE STEP SWITCHERS */
 function initTimelineSwitcher() {
   const tabBtns = document.querySelectorAll('.timeline-tab-btn');
   const timelines = document.querySelectorAll('.timeline-track');
@@ -394,11 +365,7 @@ function initTimelineSwitcher() {
   });
 }
 
-/*
-=========================================
-9. SUCCESS STORY SLIDERS
-=========================================
-*/
+/* SUCCESS STORY SLIDERS */
 function initSuccessStoriesSlider() {
   const sliderTrack = document.querySelector('.slider-track');
   const slides = document.querySelectorAll('.slider-slide');
@@ -455,11 +422,7 @@ function initSuccessStoriesSlider() {
   if (nextBtn) nextBtn.addEventListener('click', resetAutoSlideTimer);
 }
 
-/*
-=========================================
-10. TESTIMONIAL SLIDER FOR MOBILE MOCK
-=========================================
-*/
+/* TESTIMONIAL SLIDER FOR MOBILE MOCK*/
 function initTestimonialCarousel() {
   const dots = document.querySelectorAll('.testimonial-dot');
   const cards = document.querySelectorAll('.testimonial-card-item');
@@ -498,11 +461,7 @@ function initTestimonialCarousel() {
   });
 }
 
-/*
-=========================================
-11. MOBILE FOOTER ACCORDION COLLAPSE
-=========================================
-*/
+/* MOBILE FOOTER ACCORDION COLLAPSE */
 function initFooterAccordion() {
   const footerTitles = document.querySelectorAll('.footer-col-title');
   
