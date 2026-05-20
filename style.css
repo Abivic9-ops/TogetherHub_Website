@@ -73,6 +73,70 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body.light-mode,
+body.dark-mode {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.theme-toggle-btn:focus {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+.theme-toggle-btn i {
+  font-size: 1.1rem;
+  transition: transform 0.35s ease;
+}
+
+.theme-toggle-btn.active i {
+  transform: rotate(360deg);
+}
+
+body.light-mode {
+  --dark-bg: hsl(222, 47%, 8%);
+  --dark-banner: hsl(222, 47%, 12%);
+  --light-bg: hsl(0, 0%, 100%);
+  --light-bg-alt: hsl(210, 40%, 98%);
+  --text-dark: hsl(222, 47%, 12%);
+  --text-dark-secondary: hsl(215, 25%, 38%);
+  --text-dark-muted: hsl(215, 16%, 57%);
+  --text-light: hsl(0, 0%, 100%);
+  --text-light-secondary: hsl(210, 40%, 88%);
+  --text-light-muted: hsl(215, 20%, 65%);
+}
+
+body.dark-mode {
+  --dark-bg: hsl(224, 22%, 14%);
+  --dark-banner: hsl(224, 20%, 18%);
+  --light-bg: hsl(223, 22%, 10%);
+  --light-bg-alt: hsl(224, 24%, 14%);
+  --text-dark: hsl(0, 0%, 97%);
+  --text-dark-secondary: hsl(210, 40%, 80%);
+  --text-dark-muted: hsl(210, 40%, 68%);
+  --text-light: hsl(0, 0%, 100%);
+  --text-light-secondary: hsl(210, 40%, 88%);
+  --text-light-muted: hsl(210, 40%, 73%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1270,7 +1334,7 @@ footer {
 /* --- FIVE-TIER RESPONSIVE LIBRARY BREAKPOINTS --- */
 
 /* 
-  =========================================
+ 
   1. MOBILE SMALL (Phones < 480px)
   =========================================
 */

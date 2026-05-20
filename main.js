@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize all modular systems
   initStickyHeader();
   initMobileMenu();
+  initThemeToggle();
   initModals();
   initFormValidations();
   initToastNotificationSystem();
@@ -72,6 +73,36 @@ function initMobileMenu() {
       toggleMenu();
     });
   });
+}
+
+/* THEME TOGGLE */
+function initThemeToggle() {
+  const themeToggle = document.querySelector('.theme-toggle-btn');
+  const body = document.body;
+  const themeKey = 'togetherhub-theme';
+  const storedTheme = localStorage.getItem(themeKey);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+
+  const applyTheme = (theme) => {
+    body.classList.toggle('dark-mode', theme === 'dark');
+    body.classList.toggle('light-mode', theme === 'light');
+    if (themeToggle) {
+      themeToggle.classList.toggle('active', theme === 'dark');
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.innerHTML = theme === 'dark' ? "<i class='bx bx-sun'></i>" : "<i class='bx bx-moon'></i>";
+    }
+    localStorage.setItem(themeKey, theme);
+  };
+
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
 }
 
 /* DIALOG MODAL FRAMEWORKS */

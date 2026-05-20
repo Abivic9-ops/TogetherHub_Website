@@ -1,494 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TogetherHub connects people, resources, and ideas to solve community problems and create positive local impact. Join the movement today.">
-  <title>TogetherHub | Empowering Communities</title>
 
-  <!-- Boxicons Icon Library -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!-- Font Awesome Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TogetherHub connects people, resources, and ideas to solve community problems and create positive local impact. Join the movement today.">
+    <title>TogetherHub | Empowering Communities</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Boxicons Icon Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-  <!-- DYNAMIC STICKY NAVIGATION HEADER-->
-  <header>
-    <div class="container flex-between">
+    <!-- DYNAMIC STICKY NAVIGATION HEADER-->
+    <header>
+        <div class="container flex-between">
 
-      <!-- Brand Logo — uses logo-icon-box with Boxicon -->
-      <a href="index.html" class="logo-link" id="logo-anchor">
-        <div class="logo-icon-box">
-          <i class='bx bxs-donate-heart'></i>
+            <!-- Brand Logo — uses logo-icon-box with Boxicon -->
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link">Communities</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Hamburger Trigger -->
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
-        <div class="logo-text-wrapper">
-          <span class="logo-title">TogetherHub</span>
-          <span class="logo-subtitle">Stronger Communities, Together.</span>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero-showcase">
+        <div class="container">
+            <div class="hero-content">
+
+                <!-- Tagline badge -->
+                <span class="hero-badge">
+                    <i class='bx bxs-heart'></i>
+                    Together, We Can
+                    <i class='bx bxs-heart'></i>
+                </span>
+
+                <!-- Main headline -->
+                <h1 class="hero-title">Solving Community<br>Problems Together.</h1>
+
+                <!-- Supporting description -->
+                <p class="hero-description">
+                    TogetherHub connects people, resources, and ideas to tackle real problems in
+                    our communities across all neighbourhoods at a time.
+                </p>
+
+                <!-- Call to action buttons -->
+                <div class="hero-cta">
+                    <button class="btn btn-primary" data-modal-target="modal-join">
+                        Join the Movement <i class='bx bx-right-arrow-alt'></i>
+                    </button>
+                    <button class="btn btn-secondary" data-modal-target="modal-video">
+                        <i class='bx bx-play-circle'></i> See How It Works
+                    </button>
+                </div>
+
+                <!-- Quick trust signals -->
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <i class='bx bxs-check-shield'></i>
+                        <span>Free to join</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class='bx bxs-group'></i>
+                        <span>2,450+ volunteers</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class='bx bxs-map-pin'></i>
+                        <span>320+ active projects</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="nav-menu" id="navigation-bar">
-        <a href="index.html"        class="nav-link active">Home</a>
-        <a href="how-it-works.html" class="nav-link">How It Works</a>
-        <a href="communities.html"  class="nav-link">Communities</a>
-        <a href="impact.html"       class="nav-link">Impact</a>
-        <a href="about-us.html"     class="nav-link">About Us</a>
-        <button class="btn-header" data-modal-target="modal-join">
-          <i class='bx bx-user-plus'></i> Join the Movement
-        </button>
-      </nav>
+        <!-- Organic convex curve cutout at bottom -->
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
 
-      <!-- Mobile Hamburger Trigger -->
-      <div class="menu-toggle" id="mobile-menu-trigger">
-        <span></span><span></span><span></span>
-      </div>
+    <!-- HOW IT WORKS — 3 FLEXBOX CARDS-->
+    <section class="card-section" id="how-it-works-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">
+                    <i class='bx bx-bulb'></i> How It Works
+                </span>
+                <h2 class="section-title">Simple Steps. Powerful Impact.</h2>
+                <p class="section-subtitle">
+                    We make it easy for anyone to create change in their community. No experience needed, just the will
+                    to help improve our communities.
+                </p>
+            </div>
+
+            <!-- Three Flexbox Step Cards -->
+            <div class="card-grid" id="steps-card-layout">
+
+                <!-- Card 01: Identify -->
+                <article class="card-item step-1">
+                    <span class="card-badge-num">01</span>
+                    <div class="card-icon-box flex-center">
+                        <i class='bx bxs-group'></i>
+                    </div>
+                    <h3 class="card-title">Identify Real Problems</h3>
+                    <p class="card-desc">
+                        Discover and vote on the most pressing issues in your community.
+                        Your voice shapes local priorities and drives solutions that actually matter.
+                    </p>
+                    <a href="how-it-works.html" class="card-cta-link">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </article>
+
+                <!-- Card 02: Collaborate -->
+                <article class="card-item step-2">
+                    <span class="card-badge-num">02</span>
+                    <div class="card-icon-box flex-center">
+                        <i class='bx bxs-hand-up'></i>
+                    </div>
+                    <h3 class="card-title">Collaborate &amp; Act</h3>
+                    <p class="card-desc">
+                        Join forces with neighbours and organisations to build lasting solutions.
+                        Pool resources, skills, and time for maximum community impact.
+                    </p>
+                    <a href="communities.html" class="card-cta-link">
+                        Explore communities <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </article>
+
+                <!-- Card 03: Track -->
+                <article class="card-item step-3">
+                    <span class="card-badge-num">03</span>
+                    <div class="card-icon-box flex-center">
+                        <i class='bx bx-bar-chart-alt-2'></i>
+                    </div>
+                    <h3 class="card-title">Track &amp; Celebrate Impact</h3>
+                    <p class="card-desc">
+                        See progress in real-time and celebrate every win together.
+                        Every milestone counts and inspires more people to take action.
+                    </p>
+                    <a href="impact.html" class="card-cta-link">
+                        View impact <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL IMPACT STATS BANNER-->
+    <section class="stats-banner-section" id="impact-banner">
+        <div class="container">
+            <div class="stats-banner-box">
+                <h2 class="stats-banner-title">Real Impact. Real Change.</h2>
+
+                <div class="stats-banner-grid">
+
+                    <!-- Stat 1: Volunteers -->
+                    <div class="stats-banner-item volunteers">
+                        <div class="stats-banner-icon flex-center">
+                            <i class='bx bxs-user-check'></i>
+                        </div>
+                        <div class="stats-banner-text">
+                            <!-- data-target triggers count-up animation; data-suffix sets the unit -->
+                            <span class="stats-number" data-target="2450" data-suffix="+">0</span>
+                            <span class="stats-label">Active Volunteers</span>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2: Projects -->
+                    <div class="stats-banner-item projects">
+                        <div class="stats-banner-icon flex-center">
+                            <i class='bx bxs-grid-alt'></i>
+                        </div>
+                        <div class="stats-banner-text">
+                            <span class="stats-number" data-target="320" data-suffix="+">0</span>
+                            <span class="stats-label">Community Projects</span>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3: Lives Impacted -->
+                    <div class="stats-banner-item impacted">
+                        <div class="stats-banner-icon flex-center">
+                            <i class='bx bxs-map-pin'></i>
+                        </div>
+                        <div class="stats-banner-text">
+                            <span class="stats-number" data-target="18750" data-suffix="+">0</span>
+                            <span class="stats-label">Lives Impacted</span>
+                        </div>
+                    </div>
+
+                    <!-- Stat 4: Completion Rate -->
+                    <div class="stats-banner-item completed">
+                        <div class="stats-banner-icon flex-center">
+                            <i class='bx bxs-medal'></i>
+                        </div>
+                        <div class="stats-banner-text">
+                            <span class="stats-number" data-target="95" data-suffix="%">0</span>
+                            <span class="stats-label">Projects Completed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--STRONGER TOGETHER,TESTIMONIALS -->
+    <section class="testimonials-section" id="voice-stories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">
+                    <i class='bx bx-conversation'></i> Voices From Our Community
+                </span>
+                <h2 class="section-title">Stronger Together</h2>
+                <p class="section-subtitle">
+                    Hear from real people making a real difference every day in their communities.
+                </p>
+            </div>
+
+            <!-- Testimonial Flexbox Grid -->
+            <div class="testimonial-grid">
+
+                <!-- Card 1: Aisha Khan -->
+                <article class="testimonial-card-item">
+                    <!-- Boxicon quote icon replaces old SVG -->
+                    <i class='bx bxs-quote-alt-left testimonial-quote-icon'></i>
+                    <p class="testimonial-quote-text">
+                        "TogetherHub helped us turn a local trash problem into a community clean-up
+                        movement. We saw real change in just weeks — it was truly incredible!"
+                    </p>
+                    <div class="testimonial-author-box">
+                        <!-- Initials avatar replaces SVG placeholder -->
+                        <div class="testimonial-avatar-img avatar-teal">AK</div>
+                        <div class="testimonial-author-info">
+                            <span class="testimonial-author-name">Aisha Khan</span>
+                            <span class="testimonial-author-role">Community Leader, Greenfield</span>
+                            <div class="testimonial-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Marcus Lee -->
+                <article class="testimonial-card-item">
+                    <i class='bx bxs-quote-alt-left testimonial-quote-icon purple-quote'></i>
+                    <p class="testimonial-quote-text">
+                        "I found like-minded neighbours, shared ideas, and together we created a
+                        safe space for kids in our neighbourhood. TogetherHub made it all possible."
+                    </p>
+                    <div class="testimonial-author-box">
+                        <div class="testimonial-avatar-img avatar-purple">ML</div>
+                        <div class="testimonial-author-info">
+                            <span class="testimonial-author-name">Marcus Lee</span>
+                            <span class="testimonial-author-role">Volunteer Organizer, Unity Park</span>
+                            <div class="testimonial-stars purple-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Carousel dot indicators -->
+            <div class="testimonial-dots" id="carousel-indicators">
+                <span class="testimonial-dot active"></span>
+                <span class="testimonial-dot"></span>
+                <span class="testimonial-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!--BE THE CHANGE — CTA BANNER -->
+    <section class="cta-banner-section" id="be-the-change">
+        <div class="container">
+            <div class="cta-banner-box">
+
+                <!-- Decorative background icons (aria-hidden so screen readers skip) -->
+                <div class="cta-backdrop-icons" aria-hidden="true">
+                    <i class='bx bx-group cta-bg-icon'></i>
+                    <i class='bx bxs-heart cta-bg-icon'></i>
+                    <i class='bx bx-globe cta-bg-icon'></i>
+                </div>
+
+                <!-- Left text content -->
+                <div class="cta-banner-content">
+                    <h2 class="cta-banner-title">Be the Change<br>Your Community Needs</h2>
+                    <p class="cta-banner-desc">
+                        Join thousands of people who are working together to build better,
+                        stronger communities every single day.
+                    </p>
+                </div>
+
+                <!-- Right CTA and avatar group -->
+                <div class="cta-banner-actions">
+                    <div class="cta-banner-btn-wrap">
+                        <button class="btn btn-primary" data-modal-target="modal-join" style="padding: 14px 28px;">
+                            Join the Movement <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                        <span class="cta-banner-meta">
+                            <i class='bx bxs-check-shield'></i>
+                            It's free and takes less than a minute.
+                        </span>
+                    </div>
+
+                    <!-- Overlapping avatar cluster -->
+                    <div class="avatar-group-wrap">
+                        <div class="avatar-group">
+                            <div class="avatar-group-item avatar-teal-sm">A</div>
+                            <div class="avatar-group-item avatar-purple-sm">M</div>
+                            <div class="avatar-group-item avatar-blue-sm">S</div>
+                            <div class="avatar-group-item avatar-yellow-sm">J</div>
+                        </div>
+                        <span class="avatar-group-text">Join <strong>2,450+</strong> others today</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+
+                <!-- Column 1: Brand -->
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Platform -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It
+                                Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i>
+                                Communities</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Start a
+                                Project</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a>
+                        </li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a>
+                        </li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Support -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Newsletter -->
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!--MODAL: JOIN THE MOVEMENT -->
+    <div class="modal-overlay" id="modal-join">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-header">
+                <i class='bx bxs-donate-heart'></i>
+            </div>
+            <h3 class="modal-title">Join TogetherHub Today</h3>
+            <p class="modal-desc">
+                Create your local profile in under two minutes. Connect with your community and
+                join ongoing projects making a real difference.
+            </p>
+            <form class="validated-form" data-form-type="Profile Signup">
+                <div class="form-group">
+                    <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
+                    <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
+                    <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal
+                        Code</label>
+                    <input type="text" id="join-location" class="form-input" placeholder="10001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form-submit">
+                    <i class='bx bx-rocket'></i> Register and Get Started
+                </button>
+            </form>
+        </div>
     </div>
-  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="hero-showcase">
-    <div class="container">
-      <div class="hero-content">
-
-        <!-- Tagline badge -->
-        <span class="hero-badge">
-          <i class='bx bxs-heart'></i>
-          Together, We Can
-          <i class='bx bxs-heart'></i>
-        </span>
-
-        <!-- Main headline -->
-        <h1 class="hero-title">Solving Community<br>Problems Together.</h1>
-
-        <!-- Supporting description -->
-        <p class="hero-description">
-          TogetherHub connects people, resources, and ideas to tackle real problems in
-          our communities across all neighbourhoods at a time.
-        </p>
-
-        <!-- Call to action buttons -->
-        <div class="hero-cta">
-          <button class="btn btn-primary" data-modal-target="modal-join">
-            Join the Movement <i class='bx bx-right-arrow-alt'></i>
-          </button>
-          <button class="btn btn-secondary" data-modal-target="modal-video">
-            <i class='bx bx-play-circle'></i> See How It Works
-          </button>
+    <!-- MODAL: VIDEO WALKTHROUGH-->
+    <div class="modal-overlay" id="modal-video">
+        <div class="modal-content" style="max-width:700px; padding:1.5rem; background-color:var(--dark-bg);">
+            <button class="modal-close" style="color:var(--text-light);" aria-label="Close modal">&times;</button>
+            <div class="video-container"
+                style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:var(--border-radius-sm); margin-top:1.5rem;">
+                <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="TogetherHub Concept Walkthrough"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
-
-        <!-- Quick trust signals -->
-        <div class="hero-trust">
-          <div class="trust-item">
-            <i class='bx bxs-check-shield'></i>
-            <span>Free to join</span>
-          </div>
-          <div class="trust-item">
-            <i class='bx bxs-group'></i>
-            <span>2,450+ volunteers</span>
-          </div>
-          <div class="trust-item">
-            <i class='bx bxs-map-pin'></i>
-            <span>320+ active projects</span>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- Organic convex curve cutout at bottom -->
-    <div class="hero-curve-container">
-      <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
-      </svg>
-    </div>
-  </section>
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
 
-  <!-- HOW IT WORKS — 3 FLEXBOX CARDS-->
-  <section class="card-section" id="how-it-works-preview">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tagline">
-          <i class='bx bx-bulb'></i> How It Works
-        </span>
-        <h2 class="section-title">Simple Steps. Powerful Impact.</h2>
-        <p class="section-subtitle">
-          We make it easy for anyone to create change in their community. No experience needed, just the will to help improve our communities.
-        </p>
-      </div>
-
-      <!-- Three Flexbox Step Cards -->
-      <div class="card-grid" id="steps-card-layout">
-
-        <!-- Card 01: Identify -->
-        <article class="card-item step-1">
-          <span class="card-badge-num">01</span>
-          <div class="card-icon-box flex-center">
-            <i class='bx bxs-group'></i>
-          </div>
-          <h3 class="card-title">Identify Real Problems</h3>
-          <p class="card-desc">
-            Discover and vote on the most pressing issues in your community.
-            Your voice shapes local priorities and drives solutions that actually matter.
-          </p>
-          <a href="how-it-works.html" class="card-cta-link">
-            Learn more <i class='bx bx-right-arrow-alt'></i>
-          </a>
-        </article>
-
-        <!-- Card 02: Collaborate -->
-        <article class="card-item step-2">
-          <span class="card-badge-num">02</span>
-          <div class="card-icon-box flex-center">
-            <i class='bx bxs-hand-up'></i>
-          </div>
-          <h3 class="card-title">Collaborate &amp; Act</h3>
-          <p class="card-desc">
-            Join forces with neighbours and organisations to build lasting solutions.
-            Pool resources, skills, and time for maximum community impact.
-          </p>
-          <a href="communities.html" class="card-cta-link">
-            Explore communities <i class='bx bx-right-arrow-alt'></i>
-          </a>
-        </article>
-
-        <!-- Card 03: Track -->
-        <article class="card-item step-3">
-          <span class="card-badge-num">03</span>
-          <div class="card-icon-box flex-center">
-            <i class='bx bx-bar-chart-alt-2'></i>
-          </div>
-          <h3 class="card-title">Track &amp; Celebrate Impact</h3>
-          <p class="card-desc">
-            See progress in real-time and celebrate every win together.
-            Every milestone counts and inspires more people to take action.
-          </p>
-          <a href="impact.html" class="card-cta-link">
-            View impact <i class='bx bx-right-arrow-alt'></i>
-          </a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- REAL IMPACT STATS BANNER-->
-  <section class="stats-banner-section" id="impact-banner">
-    <div class="container">
-      <div class="stats-banner-box">
-        <h2 class="stats-banner-title">Real Impact. Real Change.</h2>
-
-        <div class="stats-banner-grid">
-
-          <!-- Stat 1: Volunteers -->
-          <div class="stats-banner-item volunteers">
-            <div class="stats-banner-icon flex-center">
-              <i class='bx bxs-user-check'></i>
-            </div>
-            <div class="stats-banner-text">
-              <!-- data-target triggers count-up animation; data-suffix sets the unit -->
-              <span class="stats-number" data-target="2450" data-suffix="+">0</span>
-              <span class="stats-label">Active Volunteers</span>
-            </div>
-          </div>
-
-          <!-- Stat 2: Projects -->
-          <div class="stats-banner-item projects">
-            <div class="stats-banner-icon flex-center">
-              <i class='bx bxs-grid-alt'></i>
-            </div>
-            <div class="stats-banner-text">
-              <span class="stats-number" data-target="320" data-suffix="+">0</span>
-              <span class="stats-label">Community Projects</span>
-            </div>
-          </div>
-
-          <!-- Stat 3: Lives Impacted -->
-          <div class="stats-banner-item impacted">
-            <div class="stats-banner-icon flex-center">
-              <i class='bx bxs-map-pin'></i>
-            </div>
-            <div class="stats-banner-text">
-              <span class="stats-number" data-target="18750" data-suffix="+">0</span>
-              <span class="stats-label">Lives Impacted</span>
-            </div>
-          </div>
-
-          <!-- Stat 4: Completion Rate -->
-          <div class="stats-banner-item completed">
-            <div class="stats-banner-icon flex-center">
-              <i class='bx bxs-medal'></i>
-            </div>
-            <div class="stats-banner-text">
-              <span class="stats-number" data-target="95" data-suffix="%">0</span>
-              <span class="stats-label">Projects Completed</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--STRONGER TOGETHER,TESTIMONIALS -->
-  <section class="testimonials-section" id="voice-stories">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tagline">
-          <i class='bx bx-conversation'></i> Voices From Our Community
-        </span>
-        <h2 class="section-title">Stronger Together</h2>
-        <p class="section-subtitle">
-          Hear from real people making a real difference every day in their communities.
-        </p>
-      </div>
-
-      <!-- Testimonial Flexbox Grid -->
-      <div class="testimonial-grid">
-
-        <!-- Card 1: Aisha Khan -->
-        <article class="testimonial-card-item">
-          <!-- Boxicon quote icon replaces old SVG -->
-          <i class='bx bxs-quote-alt-left testimonial-quote-icon'></i>
-          <p class="testimonial-quote-text">
-            "TogetherHub helped us turn a local trash problem into a community clean-up
-            movement. We saw real change in just weeks — it was truly incredible!"
-          </p>
-          <div class="testimonial-author-box">
-            <!-- Initials avatar replaces SVG placeholder -->
-            <div class="testimonial-avatar-img avatar-teal">AK</div>
-            <div class="testimonial-author-info">
-              <span class="testimonial-author-name">Aisha Khan</span>
-              <span class="testimonial-author-role">Community Leader, Greenfield</span>
-              <div class="testimonial-stars">
-                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2: Marcus Lee -->
-        <article class="testimonial-card-item">
-          <i class='bx bxs-quote-alt-left testimonial-quote-icon purple-quote'></i>
-          <p class="testimonial-quote-text">
-            "I found like-minded neighbours, shared ideas, and together we created a
-            safe space for kids in our neighbourhood. TogetherHub made it all possible."
-          </p>
-          <div class="testimonial-author-box">
-            <div class="testimonial-avatar-img avatar-purple">ML</div>
-            <div class="testimonial-author-info">
-              <span class="testimonial-author-name">Marcus Lee</span>
-              <span class="testimonial-author-role">Volunteer Organizer, Unity Park</span>
-              <div class="testimonial-stars purple-stars">
-                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Carousel dot indicators -->
-      <div class="testimonial-dots" id="carousel-indicators">
-        <span class="testimonial-dot active"></span>
-        <span class="testimonial-dot"></span>
-        <span class="testimonial-dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!--BE THE CHANGE — CTA BANNER -->
-  <section class="cta-banner-section" id="be-the-change">
-    <div class="container">
-      <div class="cta-banner-box">
-
-        <!-- Decorative background icons (aria-hidden so screen readers skip) -->
-        <div class="cta-backdrop-icons" aria-hidden="true">
-          <i class='bx bx-group cta-bg-icon'></i>
-          <i class='bx bxs-heart cta-bg-icon'></i>
-          <i class='bx bx-globe cta-bg-icon'></i>
-        </div>
-
-        <!-- Left text content -->
-        <div class="cta-banner-content">
-          <h2 class="cta-banner-title">Be the Change<br>Your Community Needs</h2>
-          <p class="cta-banner-desc">
-            Join thousands of people who are working together to build better,
-            stronger communities every single day.
-          </p>
-        </div>
-
-        <!-- Right CTA and avatar group -->
-        <div class="cta-banner-actions">
-          <div class="cta-banner-btn-wrap">
-            <button class="btn btn-primary" data-modal-target="modal-join" style="padding: 14px 28px;">
-              Join the Movement <i class='bx bx-right-arrow-alt'></i>
-            </button>
-            <span class="cta-banner-meta">
-              <i class='bx bxs-check-shield'></i>
-              It's free and takes less than a minute.
-            </span>
-          </div>
-
-          <!-- Overlapping avatar cluster -->
-          <div class="avatar-group-wrap">
-            <div class="avatar-group">
-              <div class="avatar-group-item avatar-teal-sm">A</div>
-              <div class="avatar-group-item avatar-purple-sm">M</div>
-              <div class="avatar-group-item avatar-blue-sm">S</div>
-              <div class="avatar-group-item avatar-yellow-sm">J</div>
-            </div>
-            <span class="avatar-group-text">Join <strong>2,450+</strong> others today</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER-->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-
-        <!-- Column 1: Brand -->
-        <div class="footer-brand-col">
-          <a href="index.html" class="logo-link">
-            <div class="logo-icon-box">
-              <i class='bx bxs-donate-heart'></i>
-            </div>
-            <div class="logo-text-wrapper">
-              <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
-            </div>
-          </a>
-          <p class="footer-brand-desc">
-            Connecting people and resources to solve real community problems
-            and create lasting, meaningful change.
-          </p>
-          <div class="footer-socials">
-            <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
-            <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
-            <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-            <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-          </div>
-        </div>
-
-        <!-- Column 2: Platform -->
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">Platform</h4>
-          <ul class="footer-links-list">
-            <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
-            <li><a href="communities.html"  class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
-            <li><a href="communities.html"  class="footer-link"><i class='bx bx-chevron-right'></i> Start a Project</a></li>
-            <li><a href="#"               class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Company -->
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links-list">
-            <li><a href="about-us.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
-            <li><a href="impact.html"   class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
-            <li><a href="#"           class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
-            <li><a href="#"           class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Support -->
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">Support</h4>
-          <ul class="footer-links-list">
-            <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
-            <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
-            <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
-            <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 5: Newsletter -->
-        <div class="footer-news-col">
-          <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
-          <p class="footer-news-desc">
-            Stay updated on community stories, impact reports, and volunteer opportunities.
-          </p>
-          <form class="footer-news-form">
-            <input type="email" class="footer-news-input" placeholder="Enter your email" required aria-label="Email address">
-            <button type="submit" class="footer-news-btn flex-center">
-              <i class='bx bx-send'></i>
-            </button>
-          </form>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <span>
-          &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
-          Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
-        </span>
-      </div>
-    </div>
-  </footer>
-
-  <!--MODAL: JOIN THE MOVEMENT -->
-  <div class="modal-overlay" id="modal-join">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-icon-header">
-        <i class='bx bxs-donate-heart'></i>
-      </div>
-      <h3 class="modal-title">Join TogetherHub Today</h3>
-      <p class="modal-desc">
-        Create your local profile in under two minutes. Connect with your community and
-        join ongoing projects making a real difference.
-      </p>
-      <form class="validated-form" data-form-type="Profile Signup">
-        <div class="form-group">
-          <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
-          <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
-          <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal Code</label>
-          <input type="text" id="join-location" class="form-input" placeholder="10001" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-form-submit">
-          <i class='bx bx-rocket'></i> Register and Get Started
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL: VIDEO WALKTHROUGH-->
-  <div class="modal-overlay" id="modal-video">
-    <div class="modal-content" style="max-width:700px; padding:1.5rem; background-color:var(--dark-bg);">
-      <button class="modal-close" style="color:var(--text-light);" aria-label="Close modal">&times;</button>
-      <div class="video-container" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:var(--border-radius-sm); margin-top:1.5rem;">
-        <iframe
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="TogetherHub Concept Walkthrough"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification Container -->
-  <div class="toast-container"></div>
-
-  <!-- Main JavaScript Engine -->
-  <script src="main.js"></script>
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
 </body>
+
 </html>
