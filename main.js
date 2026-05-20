@@ -257,7 +257,7 @@ function showToast(message, type = 'info') {
 =========================================
 */
 function initStatsCounters() {
-  const statsElements = document.querySelectorAll('.stat-number[data-target]');
+  const statsElements = document.querySelectorAll('.stats-number[data-target]');
   if (!statsElements.length) return;
   
   const observerOptions = {
@@ -267,27 +267,28 @@ function initStatsCounters() {
   
   const animateStats = (entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const targetNumber = parseInt(target.getAttribute('data-target'), 10);
-        const duration = 2000;
-        const steps = 40;
-        const stepTime = duration / steps;
-        let currentNum = 0;
-        const increment = Math.ceil(targetNumber / steps);
-        
-        const counterInterval = setInterval(() => {
-          currentNum += increment;
-          if (currentNum >= targetNumber) {
-            target.innerHTML = formatNumber(targetNumber) + `<span class="stat-suffix">+</span>`;
-            clearInterval(counterInterval);
-          } else {
-            target.innerHTML = formatNumber(currentNum) + `<span class="stat-suffix">+</span>`;
-          }
-        }, stepTime);
-        
-        observer.unobserve(target);
-      }
+      if (!entry.isIntersecting) return;
+      const target = entry.target;
+      const rawTarget = target.getAttribute('data-target');
+      const targetNumber = Number(rawTarget.replace(/,/g, ''));
+      const suffix = target.getAttribute('data-suffix') || '';
+      const duration = 2200;
+      const startTime = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const currentValue = Math.floor(progress * targetNumber);
+        target.textContent = formatNumber(currentValue) + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          target.textContent = formatNumber(targetNumber) + suffix;
+        }
+      };
+
+      requestAnimationFrame(tick);
+      observer.unobserve(target);
     });
   };
   

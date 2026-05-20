@@ -588,93 +588,105 @@ header .container {
 
 /* --- THE REAL IMPACT STATS BANNER --- */
 .stats-banner-section {
-  padding: 10px 0 50px;
+  padding: 40px 0 60px;
+  background-color: transparent;
 }
 
 .stats-banner-box {
   background-color: var(--dark-banner);
-  border-radius: var(--border-radius-md);
-  padding: 40px var(--space-lg);
+  border-radius: var(--border-radius-lg);
+  padding: 45px 35px;
   color: var(--text-light);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .stats-banner-title {
   font-family: var(--font-family-title);
-  font-size: 1.6rem;
+  font-size: 2.1rem;
   font-weight: 800;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   letter-spacing: -0.5px;
+  color: var(--text-light);
+  text-align: center;
 }
 
 .stats-banner-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 18px;
   width: 100%;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .stats-banner-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex: 1 1 23%;
-}
-
-.stats-banner-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--border-radius-full);
-  background-color: rgba(255, 255, 255, 0.08);
-  flex-shrink: 0;
+  gap: 18px;
+  flex: 1 1 230px;
+  min-width: 230px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-md);
+  padding: 24px 20px;
+  min-height: 120px;
+  align-items: center;
 }
 
 /* Support both SVG and bx icon in stats icons */
 .stats-banner-icon i,
 .stats-banner-icon svg {
-  font-size: 1.35rem;
-  width: 22px;
-  height: 22px;
+  font-size: 1.4rem;
+  width: 24px;
+  height: 24px;
 }
 
 .stats-banner-text {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  min-width: 0;
 }
 
-.stats-banner-number {
+.stats-banner-number,
+.stats-number {
   font-family: var(--font-family-title);
-  font-size: 1.65rem;
+  font-size: 1.9rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
+  color: var(--text-light);
 }
 
-.stats-banner-label {
-  font-size: 0.85rem;
+.stats-banner-label,
+.stats-label {
+  font-size: 0.95rem;
   color: var(--text-light-secondary);
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Custom icon themes in stats banner */
 .stats-banner-item.volunteers .stats-banner-icon {
   color: var(--primary-teal);
-  background-color: hsla(172, 100%, 37%, 0.12);
+  background-color: hsla(172, 100%, 37%, 0.14);
 }
 .stats-banner-item.projects .stats-banner-icon {
   color: var(--accent-purple);
-  background-color: hsla(262, 70%, 58%, 0.12);
+  background-color: hsla(262, 70%, 58%, 0.14);
 }
 .stats-banner-item.impacted .stats-banner-icon {
   color: hsl(120, 70%, 45%);
-  background-color: hsla(120, 70%, 45%, 0.12);
+  background-color: hsla(120, 70%, 45%, 0.14);
 }
 .stats-banner-item.completed .stats-banner-icon {
   color: var(--accent-yellow);
-  background-color: hsla(42, 100%, 53%, 0.12);
+  background-color: hsla(42, 100%, 53%, 0.14);
 }
 
 /* --- VOICES FROM OUR COMMUNITY (Testimonial Cards) --- */
@@ -711,7 +723,7 @@ header .container {
   box-shadow: var(--shadow-md);
 }
 
-/* Testimonial quote icon — works as an <i> bx tag */
+/* Testimonial quote icon */
 .testimonial-quote-icon {
   font-size: 2.4rem;
   margin-bottom: 16px;
@@ -830,13 +842,13 @@ header .container {
 
 /* --- "BE THE CHANGE" CTA BANNER --- */
 .cta-banner-section {
-  padding: 40px 0 80px;
+  padding: 56px 0 100px;
 }
 
 .cta-banner-box {
   background-color: var(--dark-banner);
   border-radius: var(--border-radius-lg);
-  padding: 50px var(--space-lg);
+  padding: 60px 40px;
   color: var(--text-light);
   display: flex;
   flex-direction: row;
@@ -845,6 +857,7 @@ header .container {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  gap: 24px;
 }
 
 /* Raised hands vector backdrop illustration */
@@ -860,10 +873,10 @@ header .container {
 }
 
 .cta-banner-content {
-  max-width: 520px;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   position: relative;
   z-index: 5;
 }
@@ -885,17 +898,18 @@ header .container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 16px;
+  gap: 18px;
   position: relative;
   z-index: 5;
   text-align: right;
+  min-width: 280px;
 }
 
 .cta-banner-btn-wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 6px;
+  gap: 8px;
 }
 
 .cta-banner-meta {
@@ -1456,23 +1470,30 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
-    padding: 40px 20px;
+    gap: 24px;
+    padding: 36px 20px;
   }
-  
+  .cta-banner-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
   .cta-banner-actions {
     align-items: center;
     width: 100%;
+    margin-top: 6px;
   }
-  
+
   .cta-banner-btn-wrap {
     align-items: center;
     width: 100%;
   }
-  
+
   .cta-banner-btn-wrap .btn {
     width: 100%;
-    max-width: 320px;
+    max-width: 420px;
+    padding: 12px 18px;
   }
   
   /* Footer responsive accordion styles */
