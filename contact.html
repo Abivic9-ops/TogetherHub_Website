@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with TogetherHub. We're here to answer your questions, discuss partnerships, or hear about your community's needs.">
+    <title>Contact Us | TogetherHub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DYNAMIC STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link">Communities</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO SECTION -->
+    <section class="hero contact-hero" id="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class='bx bx-message-dots'></i>
+                    Get in Touch
+                    <i class='bx bx-message-dots'></i>
+                </span>
+                <h1 class="hero-title">We'd Love<br>to Hear From You</h1>
+                <p class="hero-description">
+                    Have a question? Want to discuss a partnership? Or ready to launch your community project? 
+                    Reach out to our team—we're here to help.
+                </p>
+            </div>
+        </div>
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & INFO GRID -->
+    <section class="contact-main-section" id="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h2 class="form-title">Send us a Message</h2>
+                        <p class="form-subtitle">We typically respond within 24 hours</p>
+                    </div>
+
+                    <form class="validated-form contact-form" data-form-type="Contact Form">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">
+                                <i class='bx bx-user'></i> Full Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="contact-name" 
+                                class="form-input form-input-lg" 
+                                placeholder="Your full name" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">
+                                <i class='bx bx-envelope'></i> Email Address
+                            </label>
+                            <input 
+                                type="email" 
+                                id="contact-email" 
+                                class="form-input form-input-lg" 
+                                placeholder="your.email@example.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-organization">
+                                <i class='bx bx-briefcase'></i> Organization
+                            </label>
+                            <input 
+                                type="text" 
+                                id="contact-organization" 
+                                class="form-input form-input-lg" 
+                                placeholder="Your organization (optional)"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-subject">
+                                <i class='bx bx-heading'></i> Subject
+                            </label>
+                            <select id="contact-subject" class="form-input form-input-lg" required>
+                                <option value="">Select a subject...</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="project">Start a Project</option>
+                                <option value="support">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">
+                                <i class='bx bx-message'></i> Message
+                            </label>
+                            <textarea 
+                                id="contact-message" 
+                                class="form-input form-input-lg" 
+                                placeholder="Tell us more about your inquiry..." 
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-form-submit" style="width: 100%;">
+                            <i class='bx bx-send'></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper">
+                    <!-- Quick Contact Cards -->
+                    <div class="contact-info-grid">
+                        <!-- Email -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box teal">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <h4 class="contact-info-title">Email Us</h4>
+                            <p class="contact-info-text">General inquiries</p>
+                            <a href="mailto:hello@togetherhub.org" class="contact-info-link">
+                                hello@togetherhub.org
+                            </a>
+                        </div>
+
+                        <!-- Support -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box purple">
+                                <i class='bx bx-support'></i>
+                            </div>
+                            <h4 class="contact-info-title">Support</h4>
+                            <p class="contact-info-text">Platform help & technical</p>
+                            <a href="mailto:support@togetherhub.org" class="contact-info-link">
+                                support@togetherhub.org
+                            </a>
+                        </div>
+
+                        <!-- Partnerships -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box blue">
+                                <i class='bx bx-handshake'></i>
+                            </div>
+                            <h4 class="contact-info-title">Partnerships</h4>
+                            <p class="contact-info-text">Collaborate with us</p>
+                            <a href="mailto:partner@togetherhub.org" class="contact-info-link">
+                                partner@togetherhub.org
+                            </a>
+                        </div>
+
+                        <!-- Volunteering -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box green">
+                                <i class='bx bxs-hand-up'></i>
+                            </div>
+                            <h4 class="contact-info-title">Volunteering</h4>
+                            <p class="contact-info-text">Join our community</p>
+                            <a href="mailto:volunteer@togetherhub.org" class="contact-info-link">
+                                volunteer@togetherhub.org
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Office Locations -->
+                    <div class="office-locations-card">
+                        <h4 class="contact-section-title">
+                            <i class='bx bxs-map-pin'></i> Office Locations
+                        </h4>
+                        <div class="office-item">
+                            <span class="office-region">North America HQ</span>
+                            <p class="office-address">
+                                123 Community Street<br>
+                                Toronto, Ontario M5V 3A1<br>
+                                Canada
+                            </p>
+                        </div>
+                        <div class="office-item">
+                            <span class="office-region">Africa Regional</span>
+                            <p class="office-address">
+                                456 Change Avenue<br>
+                                Lagos, Nigeria<br>
+                                Africa
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links-card">
+                        <h4 class="contact-section-title">
+                            <i class='bx bx-share-alt'></i> Connect With Us
+                        </h4>
+                        <div class="social-links-grid">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+
+            <div class="faq-grid">
+                <!-- FAQ Column 1 -->
+                <div class="faq-column">
+                    <!-- FAQ Item 1 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How do I join TogetherHub?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Joining is simple! Click the "Join the Movement" button anywhere on our site, 
+                                fill out your profile with your name, email, and location, and you're ready to start. 
+                                It takes less than two minutes.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 2 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Is TogetherHub free to use?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! TogetherHub is completely free for all community members. We believe 
+                                social impact should be accessible to everyone, regardless of financial means.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 3 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How are projects funded?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Projects are funded through community contributions, grants, partnerships, and 
+                                crowdfunding campaigns. We provide tools and support to help communities raise the 
+                                resources they need.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 4 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I volunteer if I don't have specific skills?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely! Every community project needs diverse skills and perspectives. 
+                                Whether you can donate time, skills, or just enthusiasm, there's a role for you.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- FAQ Column 2 -->
+                <div class="faq-column">
+                    <!-- FAQ Item 5 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How does TogetherHub measure impact?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                We track multiple metrics: lives directly impacted, projects completed, funding mobilized, 
+                                and long-term community outcomes. Every project shares real data about its progress and results.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 6 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can organizations partner with TogetherHub?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! We welcome partnerships with NGOs, businesses, educational institutions, 
+                                and government bodies. Contact our partnerships team at partner@togetherhub.org to explore collaboration.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 7 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Is my data secure on TogetherHub?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Data security is paramount. We use industry-standard encryption, comply with GDPR and 
+                                international privacy regulations, and never share your information without consent.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 8 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How can I start a community project?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Log into your account, navigate to "Start a Project," tell us about your idea, 
+                                identify impact metrics, and launch. Our team provides resources and support throughout.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class='bx bx-chevron-right'></i> Projects</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
+</body>
+
+</html>

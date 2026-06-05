@@ -526,3 +526,273 @@ function initFooterAccordion() {
     }
   });
 }
+
+/* --- COMMUNITIES PAGE FILTERING --- */
+function initCommunityFiltering() {
+  const searchInput = document.querySelector('#community-search');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const communityCards = document.querySelectorAll('.community-card');
+  
+  if (!communityCards.length) return;
+  
+  const filterCards = () => {
+    const searchTerm = searchInput?.value.toLowerCase() || '';
+    const activeFilters = Array.from(filterButtons)
+      .filter(btn => btn.classList.contains('active'))
+      .map(btn => btn.dataset.filter);
+    
+    communityCards.forEach(card => {
+      const title = card.querySelector('.community-card-title')?.textContent.toLowerCase() || '';
+      const mission = card.querySelector('.community-mission')?.textContent.toLowerCase() || '';
+      const category = card.dataset.category || '';
+      
+      const matchesSearch = title.includes(searchTerm) || mission.includes(searchTerm);
+      const matchesFilter = activeFilters.length === 0 || activeFilters.includes(category);
+      
+      card.style.display = (matchesSearch && matchesFilter) ? 'flex' : 'none';
+    });
+  };
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', filterCards);
+  }
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (button.dataset.filter === 'all') {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      } else {
+        document.querySelector('[data-filter="all"]')?.classList.remove('active');
+        button.classList.toggle('active');
+      }
+      filterCards();
+    });
+  });
+}
+
+/* --- PROJECTS PAGE FILTERING & SORTING --- */
+function initProjectFiltering() {
+  const sortSelect = document.querySelector('.sort-select');
+  const filterButtons = document.querySelectorAll('.projects-category-filter .filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  if (!projectCards.length) return;
+  
+  const sortAndFilter = () => {
+    const activeFilters = Array.from(filterButtons)
+      .filter(btn => btn.classList.contains('active'))
+      .map(btn => btn.dataset.filter);
+    
+    const sortValue = sortSelect?.value || 'featured';
+    
+    // Filter cards
+    let visibleCards = [];
+    projectCards.forEach(card => {
+      const category = card.dataset.category || '';
+      const matchesFilter = activeFilters.length === 0 || activeFilters.includes(category);
+      card.style.display = matchesFilter ? 'flex' : 'none';
+      if (matchesFilter) visibleCards.push({ element: card, category });
+    });
+    
+    // Sort cards
+    if (sortValue === 'newest') {
+      visibleCards.reverse();
+    } else if (sortValue === 'funding') {
+      visibleCards.sort((a, b) => {
+        const aFunding = parseFloat(a.element.dataset.funding || 0);
+        const bFunding = parseFloat(b.element.dataset.funding || 0);
+        return bFunding - aFunding;
+      });
+    }
+  };
+  
+  if (sortSelect) {
+    sortSelect.addEventListener('change', sortAndFilter);
+  }
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (button.dataset.filter === 'all') {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      } else {
+        document.querySelector('[data-filter="all"]')?.classList.remove('active');
+        button.classList.toggle('active');
+      }
+      sortAndFilter();
+    });
+  });
+}
+
+/* --- IMPACT METRICS COUNTER ANIMATION --- */
+function initImpactCounters() {
+  const counters = document.querySelectorAll('[data-target]');
+  if (!counters.length) return;
+  
+  const animateCounter = (element) => {
+    const target = parseInt(element.dataset.target, 10);
+    const suffix = element.dataset.suffix || '';
+    const duration = 2000;
+    const start = Date.now();
+    
+    const updateCount = () => {
+      const elapsed = Date.now() - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.floor(target * progress);
+      element.textContent = current.toLocaleString() + suffix;
+      
+      if (progress < 1) requestAnimationFrame(updateCount);
+    };
+    
+    updateCount();
+  };
+  
+  const observerOptions = { threshold: 0.3 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        animateCounter(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  counters.forEach(counter => observer.observe(counter));
+}
+
+/* --- STORIES PAGE FAQ ACCORDION --- */
+function initFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+  
+  faqItems.forEach(item => {
+    const summary = item.querySelector('.faq-question');
+    if (summary) {
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = item.hasAttribute('open');
+        
+        // Close all other items
+        faqItems.forEach(other => {
+          if (other !== item) {
+            other.removeAttribute('open');
+          }
+        });
+        
+        // Toggle current item
+        if (isOpen) {
+          item.removeAttribute('open');
+        } else {
+          item.setAttribute('open', 'open');
+        }
+      });
+    }
+  });
+}
+
+/* --- STORIES PAGE "LOAD MORE" --- */
+function initStoriesLoadMore() {
+  const loadMoreBtn = document.querySelector('.btn-load-more');
+  if (!loadMoreBtn) return;
+  
+  loadMoreBtn.addEventListener('click', () => {
+    const storiesGrid = document.querySelector('.stories-grid');
+    if (storiesGrid) {
+      // Create placeholder story cards
+      const placeholders = Array(3).fill(0).map(() => `
+        <article class="editorial-story-card">
+          <div class="story-image-wrapper">
+            <div class="story-image-placeholder gradient-education"></div>
+            <span class="story-read-time">6 min</span>
+          </div>
+          <div class="story-card-content">
+            <span class="story-category-tag education">Education</span>
+            <h3 class="story-card-title">New Story Loaded</h3>
+            <p class="story-card-excerpt">Discover more inspiring stories from communities around the world...</p>
+            <div class="story-card-meta">
+              <div class="story-author-mini">
+                <div class="author-avatar-sm gradient-teal">ML</div>
+                <div>
+                  <div class="author-name-mini">More Learning</div>
+                  <div class="author-role-mini">Editor</div>
+                </div>
+              </div>
+              <span class="publish-date-mini">Just now</span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      
+      storiesGrid.insertAdjacentHTML('beforeend', placeholders);
+    }
+    
+    // Show toast notification
+    showToast('3 more stories loaded!', 'success');
+  });
+}
+
+/* --- CONTACT PAGE FORM HANDLING --- */
+function initContactForm() {
+  const contactForm = document.querySelector('.contact-form');
+  if (!contactForm) return;
+  
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = {
+      name: contactForm.querySelector('#contact-name')?.value || '',
+      email: contactForm.querySelector('#contact-email')?.value || '',
+      organization: contactForm.querySelector('#contact-organization')?.value || '',
+      subject: contactForm.querySelector('#contact-subject')?.value || '',
+      message: contactForm.querySelector('#contact-message')?.value || ''
+    };
+    
+    // Validate
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      showToast('Please fill in all required fields', 'error');
+      return;
+    }
+    
+    // Simulate sending
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    
+    setTimeout(() => {
+      showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+      contactForm.reset();
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }, 1500);
+  });
+}
+
+/* --- INITIALIZE ALL NEW PAGE FEATURES --- */
+function initNewPageFeatures() {
+  initCommunityFiltering();
+  initProjectFiltering();
+  initImpactCounters();
+  initFAQAccordion();
+  initStoriesLoadMore();
+  initContactForm();
+}
+
+// Update DOMContentLoaded to include new features
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize all modular systems
+  initStickyHeader();
+  initMobileMenu();
+  initThemeToggle();
+  initModals();
+  initFormValidations();
+  initToastNotificationSystem();
+  initStatsCounters();
+  initDynamicFilters();
+  initTimelineSwitcher();
+  initSuccessStoriesSlider();
+  initTestimonialCarousel();
+  initFooterAccordion();
+  initNewPageFeatures(); // New page interactivity
+});

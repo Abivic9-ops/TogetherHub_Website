@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="See the real impact TogetherHub is making. Explore verified metrics, success stories, and measurable community transformations across the globe.">
+    <title>Impact | TogetherHub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DYNAMIC STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link">Communities</a>
+                <a href="impact.html" class="nav-link active">Impact</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- IMPACT HERO SECTION -->
+    <section class="hero impact-hero" id="impact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class='bx bxs-medal'></i>
+                    Measurable Results
+                    <i class='bx bxs-medal'></i>
+                </span>
+                <h1 class="hero-title">Real Change<br>Backed by Data</h1>
+                <p class="hero-description">
+                    Explore verified metrics and community transformations. Every statistic represents 
+                    real people creating lasting positive change in neighborhoods worldwide.
+                </p>
+            </div>
+        </div>
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- LIVE IMPACT METRICS DASHBOARD -->
+    <section class="impact-metrics-section" id="impact-metrics">
+        <div class="container">
+            <div class="metrics-header">
+                <h2 class="section-title">Live Impact Dashboard</h2>
+                <p class="section-subtitle">Updated in real-time across our global network</p>
+            </div>
+
+            <div class="impact-metrics-grid">
+                <!-- Metric 1: Lives Impacted -->
+                <div class="impact-metric-card large">
+                    <div class="metric-icon-wrapper teal">
+                        <i class='bx bxs-user-check'></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="247850" data-suffix="+">0</span>
+                        <span class="metric-label">Lives Directly Impacted</span>
+                        <span class="metric-trend">
+                            <i class='bx bxs-up-arrow'></i> +12% this quarter
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Metric 2: Active Volunteers -->
+                <div class="impact-metric-card large">
+                    <div class="metric-icon-wrapper purple">
+                        <i class='bx bxs-group'></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="8450" data-suffix="+">0</span>
+                        <span class="metric-label">Active Volunteers</span>
+                        <span class="metric-trend">
+                            <i class='bx bxs-up-arrow'></i> +18% growth YoY
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Metric 3: Projects Completed -->
+                <div class="impact-metric-card large">
+                    <div class="metric-icon-wrapper blue">
+                        <i class='bx bxs-check-circle'></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="892" data-suffix="">0</span>
+                        <span class="metric-label">Projects Completed</span>
+                        <span class="metric-trend">
+                            <i class='bx bxs-up-arrow'></i> +24 this month
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Metric 4: Funding Raised -->
+                <div class="impact-metric-card large">
+                    <div class="metric-icon-wrapper yellow">
+                        <i class='bx bxs-dollar-circle'></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number">$45.2M</span>
+                        <span class="metric-label">Total Funding Mobilized</span>
+                        <span class="metric-trend">
+                            <i class='bx bxs-up-arrow'></i> +8.5% YoY
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT CATEGORIES BREAKDOWN -->
+    <section class="impact-categories-section" id="impact-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Impact by Category</h2>
+                <p class="section-subtitle">Where our communities are making the biggest difference</p>
+            </div>
+
+            <div class="impact-categories-grid">
+                <!-- Education Impact -->
+                <div class="category-impact-card">
+                    <div class="category-header">
+                        <span class="category-icon">
+                            <i class='bx bx-book'></i>
+                        </span>
+                        <h3 class="category-title">Education</h3>
+                    </div>
+                    <div class="category-metric">
+                        <span class="category-metric-label">Students Supported</span>
+                        <span class="category-metric-value">42,500+</span>
+                    </div>
+                    <div class="category-progress">
+                        <div class="circular-progress" style="background: conic-gradient(var(--primary-teal) 0deg 288deg, #e0e0e0 288deg);">
+                            <span class="progress-text">78%</span>
+                        </div>
+                    </div>
+                    <p class="category-description">
+                        Scholarships, tutoring programs, and digital literacy initiatives reaching underserved communities.
+                    </p>
+                </div>
+
+                <!-- Environment Impact -->
+                <div class="category-impact-card">
+                    <div class="category-header">
+                        <span class="category-icon green">
+                            <i class='bx bx-leaf'></i>
+                        </span>
+                        <h3 class="category-title">Environment</h3>
+                    </div>
+                    <div class="category-metric">
+                        <span class="category-metric-label">Trees Planted</span>
+                        <span class="category-metric-value">128,600+</span>
+                    </div>
+                    <div class="category-progress">
+                        <div class="circular-progress" style="background: conic-gradient(#4CAF50 0deg 312deg, #e0e0e0 312deg);">
+                            <span class="progress-text">87%</span>
+                        </div>
+                    </div>
+                    <p class="category-description">
+                        Tree planting, clean-up drives, and sustainable agriculture transforming landscapes.
+                    </p>
+                </div>
+
+                <!-- Health Impact -->
+                <div class="category-impact-card">
+                    <div class="category-header">
+                        <span class="category-icon red">
+                            <i class='bx bx-heart'></i>
+                        </span>
+                        <h3 class="category-title">Health</h3>
+                    </div>
+                    <div class="category-metric">
+                        <span class="category-metric-label">People Treated</span>
+                        <span class="category-metric-value">86,200+</span>
+                    </div>
+                    <div class="category-progress">
+                        <div class="circular-progress" style="background: conic-gradient(#F44336 0deg 264deg, #e0e0e0 264deg);">
+                            <span class="progress-text">73%</span>
+                        </div>
+                    </div>
+                    <p class="category-description">
+                        Medical camps, wellness programs, and mental health support reaching vulnerable populations.
+                    </p>
+                </div>
+
+                <!-- Food Security Impact -->
+                <div class="category-impact-card">
+                    <div class="category-header">
+                        <span class="category-icon orange">
+                            <i class='bx bx-bowl'></i>
+                        </span>
+                        <h3 class="category-title">Food Security</h3>
+                    </div>
+                    <div class="category-metric">
+                        <span class="category-metric-label">Meals Provided</span>
+                        <span class="category-metric-value">950,000+</span>
+                    </div>
+                    <div class="category-progress">
+                        <div class="circular-progress" style="background: conic-gradient(#FF9800 0deg 340deg, #e0e0e0 340deg);">
+                            <span class="progress-text">94%</span>
+                        </div>
+                    </div>
+                    <p class="category-description">
+                        Community kitchens, food drives, and sustainable agriculture programs ending hunger.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT GROWTH TIMELINE -->
+    <section class="impact-timeline-section" id="impact-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Growth Journey</h2>
+                <p class="section-subtitle">Milestones and achievements that shaped TogetherHub</p>
+            </div>
+
+            <div class="impact-timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-rocket'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2020</h4>
+                        <h3 class="timeline-title">Platform Launch</h3>
+                        <p class="timeline-description">
+                            TogetherHub launches with vision to connect communities and drive social change.
+                            100 founding members across 5 regions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-group'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2021</h4>
+                        <h3 class="timeline-title">Community Expansion</h3>
+                        <p class="timeline-description">
+                            Scaled to 1,200+ volunteers across 15 communities. Reached 15,000+ people 
+                            through 42 completed projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-medal'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2022</h4>
+                        <h3 class="timeline-title">Impact Milestone</h3>
+                        <p class="timeline-description">
+                            Hit 4,500+ volunteers and 150+ completed projects. Impacted 85,000+ lives.
+                            Expanded to 28 countries globally.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2023</h4>
+                        <h3 class="timeline-title">Recognition & Scale</h3>
+                        <p class="timeline-description">
+                            Received Global Impact Award. Grew to 6,200+ volunteers, 350+ projects.
+                            Mobilized $12M in community funding.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-heart'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2024</h4>
+                        <h3 class="timeline-title">Global Presence</h3>
+                        <p class="timeline-description">
+                            Reached 8,450+ volunteers, 892 projects completed, 247,850+ lives impacted.
+                            Operating across 48 countries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <i class='bx bxs-meteor'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-year">2025-2026</h4>
+                        <h3 class="timeline-title">Future Vision</h3>
+                        <p class="timeline-description">
+                            Aiming for 15,000+ volunteers, 1,500+ active projects, 500,000+ lives impacted.
+                            Expanding AI-powered community matching and real-time impact tracking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT STORIES HIGHLIGHT -->
+    <section class="impact-stories-highlight-section" id="impact-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stories of Transformation</h2>
+                <p class="section-subtitle">Real communities, real people, real change</p>
+            </div>
+
+            <div class="impact-stories-grid">
+                <!-- Story 1 -->
+                <article class="impact-story-card">
+                    <div class="story-image-placeholder gradient-youth"></div>
+                    <div class="story-content">
+                        <span class="story-category">Education</span>
+                        <h3 class="story-title">From Dropout to Entrepreneur</h3>
+                        <p class="story-excerpt">
+                            Marcus was struggling in school until he joined our coding bootcamp. Now he's building tech solutions 
+                            that help his community, and inspiring 50+ other youth to learn programming.
+                        </p>
+                        <div class="story-meta">
+                            <span class="story-location">
+                                <i class='bx bxs-map-pin'></i> Lagos, Nigeria
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 2 -->
+                <article class="impact-story-card">
+                    <div class="story-image-placeholder gradient-environment"></div>
+                    <div class="story-content">
+                        <span class="story-category">Environment</span>
+                        <h3 class="story-title">Forest Restoration Success</h3>
+                        <p class="story-excerpt">
+                            What started as one community's tree-planting initiative has become a movement. 
+                            128,600 trees planted, 2,400 hectares of forest restored, 450+ jobs created.
+                        </p>
+                        <div class="story-meta">
+                            <span class="story-location">
+                                <i class='bx bxs-map-pin'></i> Nairobi, Kenya
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 3 -->
+                <article class="impact-story-card">
+                    <div class="story-image-placeholder gradient-health"></div>
+                    <div class="story-content">
+                        <span class="story-category">Health</span>
+                        <h3 class="story-title">Mobile Clinic Saves Lives</h3>
+                        <p class="story-excerpt">
+                            Our mobile health clinic has provided 24,000+ free check-ups, detected early-stage cancers, 
+                            and connected patients to treatment. Measurable improvement in health outcomes.
+                        </p>
+                        <div class="story-meta">
+                            <span class="story-location">
+                                <i class='bx bxs-map-pin'></i> Kampala, Uganda
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 4 -->
+                <article class="impact-story-card">
+                    <div class="story-image-placeholder gradient-food"></div>
+                    <div class="story-content">
+                        <span class="story-category">Food Security</span>
+                        <h3 class="story-title">Community Kitchen Changes Lives</h3>
+                        <p class="story-excerpt">
+                            Opening a community kitchen not only provides 500 meals daily but also teaches cooking, 
+                            nutrition, and creates employment for 15 community members.
+                        </p>
+                        <div class="story-meta">
+                            <span class="story-location">
+                                <i class='bx bxs-map-pin'></i> Cape Town, South Africa
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class='bx bx-chevron-right'></i> Projects</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: JOIN THE MOVEMENT -->
+    <div class="modal-overlay" id="modal-join">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-header">
+                <i class='bx bxs-donate-heart'></i>
+            </div>
+            <h3 class="modal-title">Join TogetherHub Today</h3>
+            <p class="modal-desc">
+                Create your local profile in under two minutes. Connect with your community and
+                join ongoing projects making a real difference.
+            </p>
+            <form class="validated-form" data-form-type="Profile Signup">
+                <div class="form-group">
+                    <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
+                    <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
+                    <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal Code</label>
+                    <input type="text" id="join-location" class="form-input" placeholder="10001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form-submit">
+                    <i class='bx bx-rocket'></i> Register and Get Started
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
+</body>
+
+</html>

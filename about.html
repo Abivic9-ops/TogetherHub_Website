@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about TogetherHub's mission to empower communities. Meet our team, understand our values, and join our movement for lasting global change.">
+    <title>About Us | TogetherHub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DYNAMIC STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link">Communities</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT HERO SECTION -->
+    <section class="hero about-hero" id="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class='bx bxs-heart'></i>
+                    Our Story
+                    <i class='bx bxs-heart'></i>
+                </span>
+                <h1 class="hero-title">Empowering Communities<br>to Solve Their Own Problems</h1>
+                <p class="hero-description">
+                    TogetherHub was built on a simple belief: communities have the power to transform themselves. 
+                    We connect people, ideas, and resources to unlock that potential.
+                </p>
+            </div>
+        </div>
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="mission-vision-section" id="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <article class="mission-card">
+                    <div class="mission-icon">
+                        <i class='bx bxs-target-lock'></i>
+                    </div>
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-text">
+                        To empower communities worldwide by connecting people, amplifying local voices, 
+                        and mobilizing resources for sustainable social change. We believe that when neighbors 
+                        unite, they can solve any problem and create lasting positive impact.
+                    </p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="mission-icon vision">
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h3 class="mission-title">Our Vision</h3>
+                    <p class="mission-text">
+                        A world where every community has the tools, knowledge, and connection to solve its 
+                        own problems. Where grassroots change-makers are celebrated and supported. Where 
+                        social impact is measured in transformed lives, not just dollars.
+                    </p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="mission-icon action">
+                        <i class='bx bxs-rocket'></i>
+                    </div>
+                    <h3 class="mission-title">Our Approach</h3>
+                    <p class="mission-text">
+                        We facilitate, we don't dictate. We listen to communities, understand their challenges, 
+                        and connect them with the resources and expertise they need. Through technology, storytelling, 
+                        and genuine human connection, we make change possible.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION -->
+    <section class="core-values-section" id="core-values">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">Principles that guide everything we do</p>
+            </div>
+
+            <div class="values-grid">
+                <!-- Value 1: Unity -->
+                <div class="value-card">
+                    <div class="value-icon teal">
+                        <i class='bx bxs-hand-holding'></i>
+                    </div>
+                    <h4 class="value-name">Unity</h4>
+                    <p class="value-description">
+                        Believing that diversity strengthens us. When we come together across differences, 
+                        we unlock our greatest potential.
+                    </p>
+                </div>
+
+                <!-- Value 2: Action -->
+                <div class="value-card">
+                    <div class="value-icon purple">
+                        <i class='bx bxs-bolt'></i>
+                    </div>
+                    <h4 class="value-name">Action</h4>
+                    <p class="value-description">
+                        Moving from conversation to real change. We measure success by the tangible impact 
+                        we create in communities.
+                    </p>
+                </div>
+
+                <!-- Value 3: Transparency -->
+                <div class="value-card">
+                    <div class="value-icon blue">
+                        <i class='bx bxs-eye'></i>
+                    </div>
+                    <h4 class="value-name">Transparency</h4>
+                    <p class="value-description">
+                        Being honest about our work, our challenges, and our impact. Trust is built through 
+                        openness and accountability.
+                    </p>
+                </div>
+
+                <!-- Value 4: Innovation -->
+                <div class="value-card">
+                    <div class="value-icon green">
+                        <i class='bx bxs-lightbulb'></i>
+                    </div>
+                    <h4 class="value-name">Innovation</h4>
+                    <p class="value-description">
+                        Continuously improving our approaches. We embrace new ideas and technologies that 
+                        enhance community impact.
+                    </p>
+                </div>
+
+                <!-- Value 5: Collaboration -->
+                <div class="value-card">
+                    <div class="value-icon orange">
+                        <i class='bx bxs-group'></i>
+                    </div>
+                    <h4 class="value-name">Collaboration</h4>
+                    <p class="value-description">
+                        Partnering with communities, organizations, and individuals. Together is always 
+                        stronger than alone.
+                    </p>
+                </div>
+
+                <!-- Value 6: Sustainability -->
+                <div class="value-card">
+                    <div class="value-icon leaf">
+                        <i class='bx bx-leaf'></i>
+                    </div>
+                    <h4 class="value-name">Sustainability</h4>
+                    <p class="value-description">
+                        Creating lasting change that endures. We focus on building systems and capacity that 
+                        communities can maintain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team-section" id="our-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Leadership</h2>
+                <p class="section-subtitle">Passionate change-makers dedicated to community empowerment</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-featured"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">Sarah Okafor</h4>
+                        <p class="member-role">Founder & Executive Director</p>
+                        <p class="member-bio">
+                            Serial social entrepreneur with 12+ years in community development. 
+                            Sarah founded TogetherHub with a vision to democratize social change.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-youth"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">James Chen</h4>
+                        <p class="member-role">Chief Technology Officer</p>
+                        <p class="member-bio">
+                            Tech innovator passionate about using technology for social good. 
+                            James leads our platform development and digital strategy.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-environment"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">Amina Hassan</h4>
+                        <p class="member-role">Head of Community Impact</p>
+                        <p class="member-bio">
+                            Community organizer with experience across 15 countries. 
+                            Amina ensures our programs truly serve the communities we support.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-health"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">David Patel</h4>
+                        <p class="member-role">Chief Financial Officer</p>
+                        <p class="member-bio">
+                            Financial strategist dedicated to sustainable, transparent operations. 
+                            David ensures our resources create maximum community impact.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-food"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">Lisa Rodriguez</h4>
+                        <p class="member-role">Director of Partnerships</p>
+                        <p class="member-bio">
+                            Network builder connecting TogetherHub with global partners. 
+                            Lisa expands our reach and amplifies community voices.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-member-card">
+                    <div class="member-image gradient-digital"></div>
+                    <div class="member-info">
+                        <h4 class="member-name">Marcus Thompson</h4>
+                        <p class="member-role">Head of Program Development</p>
+                        <p class="member-bio">
+                            Program designer focused on creating scalable, culturally-responsive solutions. 
+                            Marcus shapes the future of our initiatives.
+                        </p>
+                        <div class="member-socials">
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class='bx bx-chevron-right'></i> Projects</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: JOIN THE MOVEMENT -->
+    <div class="modal-overlay" id="modal-join">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-header">
+                <i class='bx bxs-donate-heart'></i>
+            </div>
+            <h3 class="modal-title">Join TogetherHub Today</h3>
+            <p class="modal-desc">
+                Create your local profile in under two minutes. Connect with your community and
+                join ongoing projects making a real difference.
+            </p>
+            <form class="validated-form" data-form-type="Profile Signup">
+                <div class="form-group">
+                    <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
+                    <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
+                    <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal Code</label>
+                    <input type="text" id="join-location" class="form-input" placeholder="10001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form-submit">
+                    <i class='bx bx-rocket'></i> Register and Get Started
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
+</body>
+
+</html>

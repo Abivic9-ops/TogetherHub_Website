@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Read inspiring stories from our community. Personal accounts of resilience, change-making, and transformation happening across TogetherHub.">
+    <title>Stories | TogetherHub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DYNAMIC STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link">Communities</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STORIES HERO SECTION -->
+    <section class="hero stories-hero" id="stories-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class='bx bxs-book-open'></i>
+                    Human Stories
+                    <i class='bx bxs-book-open'></i>
+                </span>
+                <h1 class="hero-title">Stories of<br>Real Change</h1>
+                <p class="hero-description">
+                    Discover the powerful narratives from community members transforming neighborhoods. 
+                    Every story is a testament to what happens when people unite for change.
+                </p>
+            </div>
+        </div>
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- FEATURED STORY -->
+    <section class="featured-story-section" id="featured-story">
+        <div class="container">
+            <article class="featured-story-card">
+                <div class="featured-story-image">
+                    <div class="featured-story-placeholder gradient-featured"></div>
+                </div>
+                <div class="featured-story-overlay">
+                    <span class="featured-story-category">Featured</span>
+                    <h1 class="featured-story-title">How One Woman's Vision Created 450+ Jobs</h1>
+                    <p class="featured-story-excerpt">
+                        Amara started with a dream to support her community. Today, her initiative has created sustainable 
+                        livelihoods for 450+ people and inspired a movement across 12 neighborhoods.
+                    </p>
+                    <div class="featured-story-meta">
+                        <div class="featured-story-author">
+                            <div class="author-avatar gradient-teal">AO</div>
+                            <div class="author-info">
+                                <span class="author-name">Amara Okonkwo</span>
+                                <span class="author-title">Community Leader, Nigeria</span>
+                            </div>
+                        </div>
+                        <div class="featured-story-read-info">
+                            <span class="read-time">
+                                <i class='bx bx-time'></i> 8 min read
+                            </span>
+                            <span class="publish-date">
+                                <i class='bx bx-calendar'></i> May 15, 2026
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary featured-story-btn">
+                        <i class='bx bx-right-arrow-alt'></i> Read Full Story
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- STORIES GRID WITH SIDEBAR -->
+    <section class="stories-main-section" id="stories-main">
+        <div class="container stories-container">
+            <!-- Main Stories Grid -->
+            <div class="stories-grid-main">
+                <div class="section-header left-aligned">
+                    <h2 class="section-title">Latest Stories</h2>
+                    <p class="section-subtitle">New narratives from our global community</p>
+                </div>
+
+                <div class="stories-grid">
+                    <!-- Story Card 1 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-youth"></div>
+                            <span class="story-read-time">6 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag education">Education</span>
+                            <h3 class="story-card-title">From Struggling Student to STEM Mentor</h3>
+                            <p class="story-card-excerpt">
+                                Marcus nearly dropped out before discovering our coding bootcamp. Now he's mentoring 30+ youth 
+                                and building apps that solve real neighborhood problems.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-blue">MC</div>
+                                    <div>
+                                        <span class="author-name-mini">Marcus Chen</span>
+                                        <span class="author-role-mini">Program Graduate</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">April 28, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Story Card 2 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-environment"></div>
+                            <span class="story-read-time">7 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag environment">Environment</span>
+                            <h3 class="story-card-title">Planting Hope: A Forest Restoration Journey</h3>
+                            <p class="story-card-excerpt">
+                                What started as a small weekend project has transformed into a movement. In 2 years, 128,600 trees 
+                                planted and 2,400 hectares restored.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-green">KN</div>
+                                    <div>
+                                        <span class="author-name-mini">Kofi Nkosi</span>
+                                        <span class="author-role-mini">Environmental Activist</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">May 12, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Story Card 3 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-health"></div>
+                            <span class="story-read-time">5 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag health">Health</span>
+                            <h3 class="story-card-title">Breaking Barriers: Mobile Clinics Save Lives</h3>
+                            <p class="story-card-excerpt">
+                                Dr. Amina and her team have provided 24,000+ free medical check-ups, detecting early-stage 
+                                diseases and connecting patients to treatment.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-red">AM</div>
+                                    <div>
+                                        <span class="author-name-mini">Dr. Amina Mohamed</span>
+                                        <span class="author-role-mini">Medical Director</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">May 5, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Story Card 4 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-food"></div>
+                            <span class="story-read-time">6 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag food">Food Security</span>
+                            <h3 class="story-card-title">Kitchen Dreams: Feeding 500 Daily</h3>
+                            <p class="story-card-excerpt">
+                                Rosa's community kitchen initiative provides nutritious meals daily while teaching cooking skills 
+                                and creating jobs for 15 community members.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-orange">RS</div>
+                                    <div>
+                                        <span class="author-name-mini">Rosa Santos</span>
+                                        <span class="author-role-mini">Kitchen Founder</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">April 22, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Story Card 5 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-digital"></div>
+                            <span class="story-read-time">7 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag education">Education</span>
+                            <h3 class="story-card-title">WiFi for All: Connecting Remote Communities</h3>
+                            <p class="story-card-excerpt">
+                                James led a digital inclusion initiative that installed WiFi in 20 public spaces, connecting 8,000+ 
+                                residents to online learning and opportunities.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-purple">JA</div>
+                                    <div>
+                                        <span class="author-name-mini">James Adeyemi</span>
+                                        <span class="author-role-mini">Tech Innovator</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">April 18, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Story Card 6 -->
+                    <article class="editorial-story-card">
+                        <div class="story-image-wrapper">
+                            <div class="story-image-placeholder gradient-youth"></div>
+                            <span class="story-read-time">8 min</span>
+                        </div>
+                        <div class="story-card-content">
+                            <span class="story-category-tag education">Education</span>
+                            <h3 class="story-card-title">Sports Changed My Life</h3>
+                            <p class="story-card-excerpt">
+                                Through our youth sports academy, 500+ kids found discipline, friendship, and hope. Many have been 
+                                scouted for professional teams and scholarships.
+                            </p>
+                            <div class="story-card-meta">
+                                <div class="story-author-mini">
+                                    <div class="author-avatar-sm gradient-teal">TC</div>
+                                    <div>
+                                        <span class="author-name-mini">Thembi Chikane</span>
+                                        <span class="author-role-mini">Youth Coach</span>
+                                    </div>
+                                </div>
+                                <span class="publish-date-mini">April 10, 2026</span>
+                            </div>
+                            <button class="story-read-btn">
+                                Continue Reading <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="stories-load-more">
+                    <button class="btn btn-outline-teal">
+                        <i class='bx bx-down-arrow-alt'></i> Load More Stories
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="stories-sidebar">
+                <!-- Newsletter CTA -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h4 class="widget-title">Subscribe for Stories</h4>
+                    <p class="widget-desc">
+                        Get inspiring stories delivered to your inbox weekly.
+                    </p>
+                    <form class="newsletter-form">
+                        <input 
+                            type="email" 
+                            class="newsletter-input" 
+                            placeholder="Your email" 
+                            required 
+                            aria-label="Email for newsletter"
+                        >
+                        <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Trending Stories -->
+                <div class="sidebar-widget trending-widget">
+                    <h4 class="widget-title">Trending Now</h4>
+                    <ul class="trending-list">
+                        <li class="trending-item">
+                            <span class="trending-number">1</span>
+                            <div class="trending-content">
+                                <a href="#" class="trending-link">Job Creation Through Community Action</a>
+                                <span class="trending-views">2.4K reads</span>
+                            </div>
+                        </li>
+                        <li class="trending-item">
+                            <span class="trending-number">2</span>
+                            <div class="trending-content">
+                                <a href="#" class="trending-link">Education Access for All</a>
+                                <span class="trending-views">1.8K reads</span>
+                            </div>
+                        </li>
+                        <li class="trending-item">
+                            <span class="trending-number">3</span>
+                            <div class="trending-content">
+                                <a href="#" class="trending-link">Environmental Victories</a>
+                                <span class="trending-views">1.6K reads</span>
+                            </div>
+                        </li>
+                        <li class="trending-item">
+                            <span class="trending-number">4</span>
+                            <div class="trending-content">
+                                <a href="#" class="trending-link">Healthcare Innovation</a>
+                                <span class="trending-views">1.2K reads</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="sidebar-widget tags-widget">
+                    <h4 class="widget-title">Explore Topics</h4>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-button">#Education</a>
+                        <a href="#" class="tag-button">#Environment</a>
+                        <a href="#" class="tag-button">#Health</a>
+                        <a href="#" class="tag-button">#FoodSecurity</a>
+                        <a href="#" class="tag-button">#Youth</a>
+                        <a href="#" class="tag-button">#Jobs</a>
+                        <a href="#" class="tag-button">#Innovation</a>
+                        <a href="#" class="tag-button">#Leadership</a>
+                    </div>
+                </div>
+
+                <!-- Featured Author -->
+                <div class="sidebar-widget author-widget">
+                    <h4 class="widget-title">Featured Author</h4>
+                    <div class="featured-author">
+                        <div class="featured-author-avatar gradient-featured"></div>
+                        <h5 class="featured-author-name">Amara Okonkwo</h5>
+                        <p class="featured-author-bio">
+                            Community leader passionate about job creation and empowerment. 15+ years of social impact experience.
+                        </p>
+                        <div class="featured-author-stats">
+                            <div class="author-stat">
+                                <span class="stat-number">28</span>
+                                <span class="stat-label">Stories</span>
+                            </div>
+                            <div class="author-stat">
+                                <span class="stat-number">12K</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline-teal" style="width: 100%;">
+                            Follow Author
+                        </button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class='bx bx-chevron-right'></i> Projects</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: JOIN THE MOVEMENT -->
+    <div class="modal-overlay" id="modal-join">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-header">
+                <i class='bx bxs-donate-heart'></i>
+            </div>
+            <h3 class="modal-title">Join TogetherHub Today</h3>
+            <p class="modal-desc">
+                Create your local profile in under two minutes. Connect with your community and
+                join ongoing projects making a real difference.
+            </p>
+            <form class="validated-form" data-form-type="Profile Signup">
+                <div class="form-group">
+                    <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
+                    <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
+                    <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal Code</label>
+                    <input type="text" id="join-location" class="form-input" placeholder="10001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form-submit">
+                    <i class='bx bx-rocket'></i> Register and Get Started
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
+</body>
+
+</html>

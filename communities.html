@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover and join vibrant communities on TogetherHub. Find causes you care about and connect with people making real change in neighborhoods worldwide.">
+    <title>Communities | TogetherHub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DYNAMIC STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <div class="logo-icon-box">
+                    <i class='bx bxs-donate-heart'></i>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">TogetherHub</span>
+                    <span class="logo-subtitle">Stronger Communities, Together.</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navigation-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="communities.html" class="nav-link active">Communities</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <button class="btn-header" data-modal-target="modal-join">
+                    <i class='bx bx-user-plus'></i> Join the Movement
+                </button>
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </nav>
+
+            <div class="menu-toggle" id="mobile-menu-trigger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- COMMUNITIES HERO SECTION -->
+    <section class="hero communities-hero" id="communities-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class='bx bxs-heart'></i>
+                    Find Your People
+                    <i class='bx bxs-heart'></i>
+                </span>
+                <h1 class="hero-title">Communities Creating<br>Real Change Together</h1>
+                <p class="hero-description">
+                    Join thousands of passionate community members working on causes that matter. 
+                    Find your tribe, share your skills, and create lasting impact.
+                </p>
+                <div class="hero-stats-inline">
+                    <div class="inline-stat">
+                        <span class="inline-stat-number">230+</span>
+                        <span class="inline-stat-label">Active Communities</span>
+                    </div>
+                    <div class="inline-stat">
+                        <span class="inline-stat-number">65K+</span>
+                        <span class="inline-stat-label">Members Engaged</span>
+                    </div>
+                    <div class="inline-stat">
+                        <span class="inline-stat-number">48</span>
+                        <span class="inline-stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-curve-container">
+            <svg class="hero-curve-svg" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SEARCH & FILTER SECTION -->
+    <section class="communities-filter-section" id="communities-filter">
+        <div class="container">
+            <div class="filter-container">
+                <!-- Search Bar -->
+                <div class="search-box-wrapper">
+                    <div class="search-box">
+                        <i class='bx bx-search'></i>
+                        <input 
+                            type="text" 
+                            id="community-search" 
+                            class="search-input" 
+                            placeholder="Search communities by name or cause..."
+                            aria-label="Search communities"
+                        >
+                    </div>
+                </div>
+
+                <!-- Filter Chips -->
+                <div class="filter-chips-wrapper">
+                    <span class="filter-label">Filter by category:</span>
+                    <div class="filter-chips">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class='bx bx-layout'></i> All Communities
+                        </button>
+                        <button class="filter-btn" data-filter="education">
+                            <i class='bx bx-book'></i> Education
+                        </button>
+                        <button class="filter-btn" data-filter="environment">
+                            <i class='bx bx-leaf'></i> Environment
+                        </button>
+                        <button class="filter-btn" data-filter="health">
+                            <i class='bx bx-heart'></i> Health
+                        </button>
+                        <button class="filter-btn" data-filter="food">
+                            <i class='bx bx-bowl'></i> Food Security
+                        </button>
+                        <button class="filter-btn" data-filter="youth">
+                            <i class='bx bx-group'></i> Youth Dev
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITIES GRID -->
+    <section class="communities-grid-section" id="communities-grid">
+        <div class="container">
+            <div class="communities-grid">
+                <!-- Community Card 1: Youth Empowerment -->
+                <article class="community-card" data-category="youth">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-youth"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Youth Empowerment Network</h3>
+                            <p class="community-mission">
+                                Providing mentorship, skills training, and opportunities for young leaders ages 16-25.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>2,340 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>18 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>12 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 2: Environmental Action -->
+                <article class="community-card" data-category="environment">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-environment"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Green Earth Initiative</h3>
+                            <p class="community-mission">
+                                Mobilizing environmental action through tree planting, clean-ups, and sustainability advocacy.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>3,120 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>24 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>8 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 3: Food Relief Network -->
+                <article class="community-card" data-category="food">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-food"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Food Relief Network</h3>
+                            <p class="community-mission">
+                                Fighting food insecurity through community kitchens, food drives, and sustainable agriculture programs.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>1,850 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>15 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>22 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 4: Clean Water Movement -->
+                <article class="community-card" data-category="environment">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-water"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Clean Water Movement</h3>
+                            <p class="community-mission">
+                                Ensuring access to clean water through infrastructure projects and educational campaigns.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>2,560 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>19 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>34 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 5: Education Access Program -->
+                <article class="community-card" data-category="education">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-education"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Education Access Program</h3>
+                            <p class="community-mission">
+                                Making quality education accessible to underprivileged communities through tutoring and scholarships.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>2,890 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>22 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>28 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 6: Health & Wellness -->
+                <article class="community-card" data-category="health">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-health"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Health & Wellness Alliance</h3>
+                            <p class="community-mission">
+                                Advancing public health through medical camps, wellness workshops, and mental health advocacy.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>3,450 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>26 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>15 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 7: Women in Leadership -->
+                <article class="community-card" data-category="youth">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-women"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Women in Leadership</h3>
+                            <p class="community-mission">
+                                Empowering women through leadership training, networking, and advocacy for gender equality.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>4,120 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>28 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>42 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Community Card 8: Digital Inclusion -->
+                <article class="community-card" data-category="education">
+                    <div class="community-card-image">
+                        <div class="card-image-placeholder gradient-digital"></div>
+                        <span class="community-badge active-badge">
+                            <i class='bx bxs-circle'></i> Active
+                        </span>
+                    </div>
+                    <div class="community-card-content">
+                        <div class="community-header">
+                            <h3 class="community-card-title">Digital Inclusion Project</h3>
+                            <p class="community-mission">
+                                Bridging the digital divide through tech training and affordable internet access initiatives.
+                            </p>
+                        </div>
+                        <div class="community-stats-inline">
+                            <div class="community-stat-item">
+                                <i class='bx bxs-group'></i>
+                                <span>1,670 members</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-grid-alt'></i>
+                                <span>12 projects</span>
+                            </div>
+                            <div class="community-stat-item">
+                                <i class='bx bxs-map-pin'></i>
+                                <span>18 regions</span>
+                            </div>
+                        </div>
+                        <div class="community-card-footer">
+                            <button class="btn btn-primary btn-sm">
+                                <i class='bx bx-plus'></i> Join Community
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION: Featured Community Spotlight -->
+    <section class="featured-community-section" id="featured-community">
+        <div class="container">
+            <div class="featured-community-card">
+                <div class="featured-community-image">
+                    <div class="featured-image-placeholder gradient-featured"></div>
+                </div>
+                <div class="featured-community-content">
+                    <span class="featured-badge">
+                        <i class='bx bxs-star'></i> Featured Community
+                    </span>
+                    <h2 class="featured-title">Community Leaders Coalition</h2>
+                    <p class="featured-description">
+                        A vibrant network of experienced community organizers mentoring the next generation of change-makers. 
+                        This coalition has successfully launched 156 initiatives, impacted over 45,000 lives, and created 
+                        lasting infrastructure for community-driven change.
+                    </p>
+                    <div class="featured-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">8,240</span>
+                            <span class="highlight-label">Active Members</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">45K+</span>
+                            <span class="highlight-label">Lives Impacted</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">156</span>
+                            <span class="highlight-label">Projects Launched</span>
+                        </div>
+                    </div>
+                    <div class="featured-cta">
+                        <button class="btn btn-primary">
+                            <i class='bx bx-rocket'></i> Join This Coalition
+                        </button>
+                        <button class="btn btn-outline-teal">
+                            <i class='bx bx-info-circle'></i> Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon-box">
+                            <i class='bx bxs-donate-heart'></i>
+                        </div>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title" style="color: var(--text-light);">TogetherHub</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Connecting people and resources to solve real community problems
+                        and create lasting, meaningful change.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Facebook"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Twitter"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="Instagram"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer-social-btn flex-center" aria-label="LinkedIn"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="how-it-works.html" class="footer-link"><i class='bx bx-chevron-right'></i> How It Works</a></li>
+                        <li><a href="communities.html" class="footer-link"><i class='bx bx-chevron-right'></i> Communities</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class='bx bx-chevron-right'></i> Projects</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html" class="footer-link"><i class='bx bx-chevron-right'></i> About Us</a></li>
+                        <li><a href="impact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Our Impact</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Blog</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class='bx bx-chevron-right'></i> Contact Us</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link"><i class='bx bx-chevron-right'></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-news-col">
+                    <h4 class="footer-col-title" style="cursor:default;">Newsletter</h4>
+                    <p class="footer-news-desc">
+                        Stay updated on community stories, impact reports, and volunteer opportunities.
+                    </p>
+                    <form class="footer-news-form">
+                        <input type="email" class="footer-news-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-news-btn flex-center">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 TogetherHub | Empowering and solving problems in our community | All rights reserved.
+                    Made with <i class='bx bxs-heart' style="color: var(--primary-teal);"></i> for communities.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: JOIN THE MOVEMENT -->
+    <div class="modal-overlay" id="modal-join">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-header">
+                <i class='bx bxs-donate-heart'></i>
+            </div>
+            <h3 class="modal-title">Join TogetherHub Today</h3>
+            <p class="modal-desc">
+                Create your local profile in under two minutes. Connect with your community and
+                join ongoing projects making a real difference.
+            </p>
+            <form class="validated-form" data-form-type="Profile Signup">
+                <div class="form-group">
+                    <label class="form-label" for="join-name"><i class='bx bx-user'></i> Full Name</label>
+                    <input type="text" id="join-name" class="form-input" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-email"><i class='bx bx-envelope'></i> Email Address</label>
+                    <input type="email" id="join-email" class="form-input" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="join-location"><i class='bx bx-map-pin'></i> Zip / Postal Code</label>
+                    <input type="text" id="join-location" class="form-input" placeholder="10001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form-submit">
+                    <i class='bx bx-rocket'></i> Register and Get Started
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
+</body>
+
+</html>
