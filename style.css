@@ -443,7 +443,7 @@ header .container {
       rgba(11, 17, 30, 0.76) 50%,
       rgba(11, 17, 30, 0.96) 100%
     ),
-    url('assets/hero_background.png');
+    url('assets/hero-bg.png');
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -455,6 +455,7 @@ header .container {
   align-items: center;
   overflow: hidden;
 }
+
 
 .hero-content {
   max-width: 620px;
