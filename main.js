@@ -1,18 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize all modular systems
-  initStickyHeader();
-  initMobileMenu();
-  initThemeToggle();
-  initModals();
-  initFormValidations();
-  initToastNotificationSystem();
-  initStatsCounters();
-  initDynamicFilters();
-  initTimelineSwitcher();
-  initSuccessStoriesSlider();
-  initTestimonialCarousel();
-  initFooterAccordion();
-});
+
 
 // STICKY NAVBAR
 function initStickyHeader() {

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="See the real impact TogetherHub is making. Explore verified metrics, success stories, and measurable community transformations across the globe.">
-    <title>Impact | TogetherHub</title>
+        content="Discover how TogetherHub works. Simple steps to identify community problems, collaborate with neighbors, and track real local impact.">
+    <title>How It Works | TogetherHub</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -33,9 +33,9 @@
 
             <nav class="nav-menu" id="navigation-bar">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="how-it-works.html" class="nav-link active">How It Works</a>
                 <a href="communities.html" class="nav-link">Communities</a>
-                <a href="impact.html" class="nav-link active">Impact</a>
+                <a href="impact.html" class="nav-link">Impact</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <button class="btn-header" data-modal-target="modal-join">
                     <i class='bx bx-user-plus'></i> Join the Movement
@@ -62,13 +62,13 @@
     </section>
 
     <!-- DETAILED STEPS SECTION -->
-    <section class="detailed-steps-section py-large">
+    <section class="detailed-steps-section">
         <div class="container">
             
             <!-- Step 1 -->
-            <div class="step-row flex-between">
+            <div class="step-grid-row">
                 <div class="step-content">
-                    <span class="step-number" style="color: var(--primary-teal); font-weight: 800; font-size: 1.5rem; letter-spacing: 2px;">01.</span>
+                    <span class="step-number" style="color: var(--primary-teal);">01.</span>
                     <h2 class="section-title">Identify the Core Problem</h2>
                     <p class="section-subtitle">
                         Every great movement starts with a single observation. Whether it's a neighborhood lacking green spaces, an elderly community needing support, or local youth lacking after-school activities, you have the power to point it out.
@@ -85,9 +85,9 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="step-row flex-between row-reverse mt-5">
+            <div class="step-grid-row step-reverse">
                 <div class="step-content">
-                    <span class="step-number" style="color: var(--accent-purple); font-weight: 800; font-size: 1.5rem; letter-spacing: 2px;">02.</span>
+                    <span class="step-number" style="color: var(--accent-purple);">02.</span>
                     <h2 class="section-title">Collaborate & Connect</h2>
                     <p class="section-subtitle">
                         Once a project gains traction, TogetherHub automatically connects you with local volunteers, organizations, and resources willing to help. You're never working alone.
@@ -104,9 +104,9 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="step-row flex-between mt-5">
+            <div class="step-grid-row">
                 <div class="step-content">
-                    <span class="step-number" style="color: var(--accent-blue); font-weight: 800; font-size: 1.5rem; letter-spacing: 2px;">03.</span>
+                    <span class="step-number" style="color: var(--accent-blue);">03.</span>
                     <h2 class="section-title">Track & Celebrate Impact</h2>
                     <p class="section-subtitle">
                         Transparency is key. Our platform allows you to update progress, share photos of your work, and track the tangible impact you've made on your community.
@@ -265,5 +265,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container"></div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="main.js"></script>
 </body>
 </html>
